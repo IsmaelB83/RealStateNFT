@@ -1,0 +1,25 @@
+{
+  "name": "realestatemarketplace",
+  "author": "https://github.com/IsmaelB83/RealStateMarketplace.git",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ganache": "ganache-cli",
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "lite-server": "^2.4.0",
+    "truffle-assertions": "^0.8.2",
+    "web3": "^1.0.0-beta.52"
+  },
+  "dependencies": {
+    "ganache-cli": "^6.12.2",
+    "openzeppelin-solidity": "^2.2.0",
+    "truffle-hdwallet-provider": "^1.0.6"
+  }
+}
