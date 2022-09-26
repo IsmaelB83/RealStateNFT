@@ -6,7 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ganache": "ganache-cli",
+    "ganache": "ganache-cli --accounts=50 --mnemonic 'shit supply shark amount et item harsh afraid congress destroy talent rat'",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

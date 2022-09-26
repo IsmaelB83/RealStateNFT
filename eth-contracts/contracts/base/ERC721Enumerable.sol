@@ -72,6 +72,16 @@ contract ERC721Enumerable is ERC721 {
         require(index < totalSupply());
         return _allTokens[index];
     }
+    
+    /**
+     * @dev Gets the list of token IDs of the requested owner
+     * @param owner address owning the tokens
+     * @return uint256[] List of token IDs owned by the requested address
+     */
+    function tokensOfOwner(address owner) public view returns (uint256[] memory) {
+        return _ownedTokens[owner];
+    }
+
 
     /********************************************************************************************/
     /*                                     INTERNAL FUNCTIONS                                   */
@@ -99,15 +109,6 @@ contract ERC721Enumerable is ERC721 {
         super._mint(to, tokenId);
         _addTokenToOwnerEnumeration(to, tokenId);
         _addTokenToAllTokensEnumeration(tokenId);
-    }
-
-    /**
-     * @dev Gets the list of token IDs of the requested owner
-     * @param owner address owning the tokens
-     * @return uint256[] List of token IDs owned by the requested address
-     */
-    function _tokensOfOwner(address owner) internal view returns (uint256[] storage) {
-        return _ownedTokens[owner];
     }
 
     /**

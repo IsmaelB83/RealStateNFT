@@ -73,7 +73,6 @@ contract ERC721 is Pausable, ERC165 {
     }
 
     function getApproved(uint256 tokenId) public view returns (address) {
-        require(_tokenApprovals[tokenId] != address(0), "Token approval does not exist");
         return _tokenApprovals[tokenId];
     }
 
@@ -109,7 +108,6 @@ contract ERC721 is Pausable, ERC165 {
         _operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
-
     
     function transferFrom(address from, address to, uint256 tokenId) public {
         require(_isApprovedOrOwner(msg.sender, tokenId));
@@ -146,6 +144,7 @@ contract ERC721 is Pausable, ERC165 {
      * is an operator of the owner, or is the owner of the token
      */
     function _isApprovedOrOwner(address spender, uint256 tokenId) internal view returns (bool) {
+        require(_tokenOwner[tokenId] != address(0), "Token does not exist");
         address owner = ownerOf(tokenId);
         return (spender == owner || getApproved(tokenId) == spender || isApprovedForAll(owner, spender));
     }
@@ -163,8 +162,6 @@ contract ERC721 is Pausable, ERC165 {
     // @dev Internal function to transfer ownership of a given token ID to another address.
     // TIP: remember the functions to use for Counters. you can refresh yourself with the link above
     function _transferFrom(address from, address to, uint256 tokenId) internal {
-        require(_isApprovedOrOwner(from, tokenId));
-        require(ownerOf(tokenId) != to, "To is alread the owner of tokenId");
         require(to != address(0), "Not a valid to address");
         _clearApproval(tokenId);
         _ownedTokensCount[from].decrement();

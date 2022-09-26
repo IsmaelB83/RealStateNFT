@@ -26,7 +26,6 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     /********************************************************************************************/
     /*                                       CONSTRUCTOR                                        *
     /********************************************************************************************/
-    // , string memory baseTokenURI
     constructor (string memory name, string memory symbol, string memory baseTokenURI) public {
         _name = name;
         _symbol = symbol;
