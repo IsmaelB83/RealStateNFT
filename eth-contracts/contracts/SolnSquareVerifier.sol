@@ -7,7 +7,7 @@ import "./ERC721Mintable.sol";
 import "./utils/SquareVerifier.sol";
 
 // TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class
-contract ERC721MintableVerifier is ERC721Mintable {
+contract SolnSquareVerifier is ERC721Mintable {
 
     /********************************************************************************************/
     /*                                       STATE                                              */

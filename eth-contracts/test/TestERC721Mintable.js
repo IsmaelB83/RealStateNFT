@@ -1,6 +1,4 @@
 // Imports
-const expect = require('chai').expect;
-const { assert } = require('chai');
 const truffleAssert = require('truffle-assertions');
 const ERC721Mintable = artifacts.require('ERC721Mintable');
 
@@ -38,8 +36,8 @@ contract('ERC721Mintable', accounts => {
     })
 
     it('Minting working properly', async () => {    
-        for (let i = 0; i < tokensIds.length; i++) {
-            await contract.mint(contract_owner, tokensIds[i], {from: contract_owner});
+        for (let i = 0; i < tokensIds.length; i++) { 
+            await erc721.mint(accounts[0], tokensIds[i], {from: accounts[0]}); 
         }
         assert.equal((await contract.tokensOfOwner(contract_owner)).length, tokensIds.length);
     })

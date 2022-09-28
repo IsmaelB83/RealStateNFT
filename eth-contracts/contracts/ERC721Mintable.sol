@@ -22,6 +22,3 @@ contract ERC721Mintable is ERC721Metadata {
         setTokenURI(tokenId);
     }
 }
-
-
-

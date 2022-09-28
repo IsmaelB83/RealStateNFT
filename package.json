@@ -1,25 +1,21 @@
 {
-  "name": "realestatemarketplace",
-  "author": "https://github.com/IsmaelB83/RealStateMarketplace.git",
-  "license": "MIT",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "ganache": "ganache-cli --accounts=50 --mnemonic 'shit supply shark amount et item harsh afraid congress destroy talent rat'",
-    "dev": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "lite-server": "^2.4.0",
-    "truffle-assertions": "^0.8.2",
-    "web3": "^1.0.0-beta.52"
-  },
-  "dependencies": {
-    "ganache-cli": "^6.12.2",
-    "openzeppelin-solidity": "^2.2.0",
-    "truffle-hdwallet-provider": "^1.0.6"
-  }
+    "name": "realestatemarketplace",
+    "author": "https://github.com/IsmaelB83/RealStateMarketplace.git",
+    "license": "MIT",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "ganache": "ganache-cli --accounts=50 --mnemonic 'shit supply shark amount et item harsh afraid congress destroy talent rat'",
+        "test": "truffle test"
+    },
+    "keywords": [],
+    "dependencies": {
+        "@truffle/hdwallet-provider": "^2.0.15",
+        "dotenv": "^16.0.2",
+        "ganache-cli": "^6.12.2",
+        "openzeppelin-solidity": "^2.2.0",
+        "truffle-assertions": "^0.8.2",
+        "truffle-hdwallet-provider": "^1.0.6"
+    }
 }
