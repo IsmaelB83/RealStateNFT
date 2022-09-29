@@ -1,23 +1,8 @@
 // Imports
 const truffleAssert = require('truffle-assertions');
+// Own imports
 const ERC721Mintable = artifacts.require('ERC721Mintable');
 
-
-// Available Accounts
-// ==================
-// account[0]   -  0x99fb0Ab83f638Af30B3433f1F785a4E34903832D
-// account[1]   -  0x5dD7a0e663A6C7d0508416854e44E9acF6937Eee
-// account[2]   -  0xE46666E8D2c9EE0F6170938298bBF349613f454C
-// account[3]   -  0x667643664B481fB801e351D6ffBA3D88CA6ea77d
-// account[4]   -  0xacb1A249f046143A7DF900408eaeACe296CF84C1
-// account[5]   -  0xAe76E4EA4Ca4A609cf39bcA850792714C032C762
-// account[6]   -  0x4abc37C1CeDf3d5Ca3f15122a30585c824fb55a9
-// account[7]   -  0xB3da9b85551D41d1adCBb718F3b6c8b6DC6fe980
-// account[8]   -  0x6656a2Ca68Ef6a7F53EEFE45d92916132F4f44db
-// account[9]   -  0xC9b569a4246F8Ea8662B0a795A0562a2a9F8e5dd
-// account[10]  -  0xF1FE089069dF35C2cE9aF63cA04d9a479ab88C98
-// account[11]  -  0x5Fed1ee0BaeFbB1D76719f21632aEE7360DCcf94
-// account[12]  -  0x71F0b0b5C13DB51099678C0608269663748B0c5f
 
 contract('ERC721Mintable', accounts => {
 
@@ -27,7 +12,7 @@ contract('ERC721Mintable', accounts => {
     const account_three = accounts[3];
     const account_four = accounts[4];
     const account_five = accounts[5];
-    const baseTokenURI = "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/";
+    const baseTokenURI = "https://erc721mintable-ibernal.s3.amazonaws.com/";
     const tokensIds = [10, 20, 30, 40, 50, 60, 70, 80];
     let contract;
 
@@ -37,15 +22,16 @@ contract('ERC721Mintable', accounts => {
 
     it('Minting working properly', async () => {    
         for (let i = 0; i < tokensIds.length; i++) { 
-            await erc721.mint(accounts[0], tokensIds[i], {from: accounts[0]}); 
+            await contract.mint(accounts[0], tokensIds[i], {from: accounts[0]}); 
         }
         assert.equal((await contract.tokensOfOwner(contract_owner)).length, tokensIds.length);
     })
  
     it('Contract deployed properly', async () => {
         assert.equal(await contract.name(), "ERC721Mintable");
-        assert.equal(await contract.symbol(), "ERC");
+        assert.equal(await contract.symbol(), "REN");
         assert.equal(await contract.baseTokenURI(), baseTokenURI);
+        console.log(await contract.baseTokenURI());
     })
 
     it('Should return token uri', async () => { 

@@ -12,10 +12,12 @@
     "keywords": [],
     "dependencies": {
         "@truffle/hdwallet-provider": "^2.0.15",
-        "dotenv": "^16.0.2",
+        "chai": "^4.3.6",
+        "dotenv": "^16.0.3",
         "ganache-cli": "^6.12.2",
         "openzeppelin-solidity": "^2.2.0",
         "truffle-assertions": "^0.8.2",
-        "truffle-hdwallet-provider": "^1.0.6"
+        "truffle-hdwallet-provider": "^1.0.6",
+        "web3": "^1.8.0"
     }
 }

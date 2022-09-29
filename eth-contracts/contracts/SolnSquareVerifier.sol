@@ -4,7 +4,9 @@ pragma solidity >=0.4.21 <0.6.0;
 // Own imports
 import "./ERC721Mintable.sol";
 // External imports
-import "./utils/SquareVerifier.sol";
+import "./SquareVerifier.sol";
+
+contract VerifierZ is SquareVerifier {}
 
 // TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class
 contract SolnSquareVerifier is ERC721Mintable {
@@ -12,7 +14,7 @@ contract SolnSquareVerifier is ERC721Mintable {
     /********************************************************************************************/
     /*                                       STATE                                              */
     /********************************************************************************************/
-    Verifier public verifierContract;
+    VerifierZ public verifierContract;
 
     // TODO define a solutions struct that can hold an index & an address
     struct Solution {
@@ -35,8 +37,8 @@ contract SolnSquareVerifier is ERC721Mintable {
     /********************************************************************************************/
     /*                                       CONSTRUCTOR                                        */
     /********************************************************************************************/
-    constructor(address verifierAddress, string memory tokenName, string memory tokenSymbol) ERC721Mintable(tokenName, tokenSymbol) public {
-        verifierContract = Verifier(verifierAddress);
+    constructor(address verifierAddress, string memory tokenName, string memory tokenSymbol, string memory baseTokenURI) ERC721Mintable(tokenName, tokenSymbol, baseTokenURI) public {
+        verifierContract = VerifierZ(verifierAddress);
     }
 
     function _getSolutionKey(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[2] memory input) private pure returns (bytes32) {
@@ -90,8 +92,4 @@ contract SolnSquareVerifier is ERC721Mintable {
         addSolution(owner, a, b, c, inputs);
         super.mint(owner, tokenId);
     }
-}
-
-contract Verifier {
-    function verifyTx(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[2] memory input) public returns (bool r);
 }
