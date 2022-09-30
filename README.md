@@ -7,11 +7,32 @@ Solidity - 0.5.2 (solc-js)
 Node v16.17.0
 Web3.js v1.5.3
 
+## Contracts ABI
+Contracts ABI can be found in folowing links:
+![SonlSquareVerifier](./eth-contracts/build/contracts/SolnSquareVerifier.json)
+![SonlSquareVerifier](./eth-contracts/build/contracts/SquareVerifier.json)
+![SonlSquareVerifier](./eth-contracts/build/contracts/ERC721Mintable.json)
+
+## Contract Address 
+
+### Goerly
+SolnSquareVerifier - https://goerli.etherscan.io/address/0x7bB6BdCA0B6AD3f94AF0bF8006501d0Fa5Ac784B
+SquareVerifier - https://goerli.etherscan.io/address/0x4294eFc714bFe42b6B7C4dbC96f89C3eCBA60EBf
+ERC721Mintable - https://goerli.etherscan.io/address/0xB4Cbf4F7229A5Ae2c3E1d537ECd9Ccf9d5191471
+### Rinkeby
+SolnSquareVerifier - https://rinkeby.etherscan.io/address/0x1AD00C9A181E8A48af9c6b971c6B812204F42eF2
+SquareVerifier - https://rinkeby.etherscan.io/address/0x82DDEB12B5Bbb22d1F0fF2a589C64D63bB49B225
+ERC721Mintable - https://rinkeby.etherscan.io/address/0x1cf1d3A41DCf1A8Fbde10C7B8cc0c8c213afbf64
+
 ## Collection in Opensea
 https://testnets.opensea.io/collection/erc721mintable-h4bduynm7e
 
-Token 100 is sold from account 0x91f8A34a3De20f8E5A6BD42f0D0d1278B3693836 to account 0x99fb0Ab83f638Af30B3433f1F785a4E34903832D
-See transaction information here: https://goerli.etherscan.io/tx/0xb58fa724334e24c85921f08bedf1bfd4da9d4565e827517dba5aaf2f2ef29c84
+5 Tokens are bought with different addresses:
+- https://goerli.etherscan.io/tx/0xb58fa724334e24c85921f08bedf1bfd4da9d4565e827517dba5aaf2f2ef29c84
+- https://goerli.etherscan.io/tx/0x97019eb5592d57c8a131786b920110b6e030d0169653730878a3d23d0bff3bdc
+- https://goerli.etherscan.io/tx/0x2ee55839c68ae360c573b2dfa5d10ead8ec167730df9bbaf4e52c47ec4f111d0
+- https://goerli.etherscan.io/tx/0x5f887a341a8da2cc63575427e9f24704ea4bfe1263ed85f852767c8a4a88b988
+- https://goerli.etherscan.io/tx/0x46e180c0b7da65d371f02009e447504da22ca31089cfa228253e66bcc39058f0
 
 ## Download, install and compile contracts
 
@@ -263,7 +284,6 @@ Starting migrations...
    > Saving artifacts
    -------------------------------------
    > Total cost:          0.08569908 ETH
-
 
 Summary
 =======

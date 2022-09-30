@@ -645,7 +645,7 @@
         "id": 214,
         "nodeType": "ImportDirective",
         "scope": 258,
-        "sourceUnit": 4135,
+        "sourceUnit": 4172,
         "src": "73:35:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -659,10 +659,10 @@
               "id": 215,
               "name": "ERC721Metadata",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4134,
+              "referencedDeclaration": 4171,
               "src": "214:14:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Metadata_$4134",
+                "typeIdentifier": "t_contract$_ERC721Metadata_$4171",
                 "typeString": "contract ERC721Metadata"
               }
             },
@@ -672,13 +672,13 @@
           }
         ],
         "contractDependencies": [
-          3195,
-          3721,
-          4020,
-          4134,
-          4215,
-          4295,
-          10710
+          3232,
+          3758,
+          4057,
+          4171,
+          4252,
+          4332,
+          10747
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -686,13 +686,13 @@
         "id": 257,
         "linearizedBaseContracts": [
           257,
-          4134,
-          10710,
-          4020,
-          3721,
-          3195,
-          4295,
-          4215
+          4171,
+          10747,
+          4057,
+          3758,
+          3232,
+          4332,
+          4252
         ],
         "name": "ERC721Mintable",
         "nodeType": "ContractDefinition",
@@ -758,10 +758,10 @@
                   "name": "ERC721Metadata",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4134,
+                  "referencedDeclaration": 4171,
                   "src": "353:14:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC721Metadata_$4134_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC721Metadata_$4171_$",
                     "typeString": "type(contract ERC721Metadata)"
                   }
                 },
@@ -922,7 +922,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10771,
+                        "referencedDeclaration": 10808,
                         "src": "592:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Mintable_$257",
@@ -936,7 +936,7 @@
                       "lValueRequested": false,
                       "memberName": "_mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3870,
+                      "referencedDeclaration": 3907,
                       "src": "592:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -990,7 +990,7 @@
                       "name": "setTokenURI",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4133,
+                      "referencedDeclaration": 4170,
                       "src": "626:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
@@ -1031,7 +1031,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4154,
+                  "referencedDeclaration": 4191,
                   "src": "545:9:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1050,7 +1050,7 @@
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4241,
+                  "referencedDeclaration": 4278,
                   "src": "555:13:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1194,7 +1194,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 4135,
+          "SourceUnit": 4172,
           "absolutePath": "project:/contracts/base/ERC721Metadata.sol",
           "file": "./base/ERC721Metadata.sol",
           "scope": 258,
@@ -1210,26 +1210,26 @@
       {
         "attributes": {
           "contractDependencies": [
-            3195,
-            3721,
-            4020,
-            4134,
-            4215,
-            4295,
-            10710
+            3232,
+            3758,
+            4057,
+            4171,
+            4252,
+            4332,
+            10747
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             257,
-            4134,
-            10710,
-            4020,
-            3721,
-            3195,
-            4295,
-            4215
+            4171,
+            10747,
+            4057,
+            3758,
+            3232,
+            4332,
+            4252
           ],
           "name": "ERC721Mintable",
           "scope": 258
@@ -1244,7 +1244,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC721Metadata",
-                  "referencedDeclaration": 4134,
+                  "referencedDeclaration": 4171,
                   "type": "contract ERC721Metadata"
                 },
                 "id": 215,
@@ -1373,7 +1373,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4134,
+                      "referencedDeclaration": 4171,
                       "type": "type(contract ERC721Metadata)",
                       "value": "ERC721Metadata"
                     },
@@ -1561,7 +1561,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4154,
+                      "referencedDeclaration": 4191,
                       "type": "modifier ()",
                       "value": "onlyOwner"
                     },
@@ -1585,7 +1585,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4241,
+                      "referencedDeclaration": 4278,
                       "type": "modifier ()",
                       "value": "whenNotPaused"
                     },
@@ -1634,7 +1634,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "_mint",
-                              "referencedDeclaration": 3870,
+                              "referencedDeclaration": 3907,
                               "type": "function (address,uint256)"
                             },
                             "children": [
@@ -1644,7 +1644,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 10771,
+                                  "referencedDeclaration": 10808,
                                   "type": "contract super ERC721Mintable",
                                   "value": "super"
                                 },
@@ -1723,7 +1723,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 4133,
+                              "referencedDeclaration": 4170,
                               "type": "function (uint256)",
                               "value": "setTokenURI"
                             },
@@ -1779,23 +1779,9 @@
     "name": "solc",
     "version": "0.5.2+commit.1df8f40c.Emscripten.clang"
   },
-  "networks": {
-    "4": {
-      "events": {},
-      "links": {},
-      "address": "0x1cf1d3A41DCf1A8Fbde10C7B8cc0c8c213afbf64",
-      "transactionHash": "0x6b20e35c959a606884820ed96a99a9080e3073a614a4eed0f878eed4da9508e5"
-    },
-    "5": {
-      "events": {},
-      "links": {},
-      "address": "0xB4Cbf4F7229A5Ae2c3E1d537ECd9Ccf9d5191471",
-      "transactionHash": "0x2f64ae2de27f8c62aaf915b312286f3de0b4a5cb40f0135ae4c054d1d0a814a4"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-09-29T22:11:37.680Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-09-30T13:20:35.921Z",
   "devdoc": {
     "methods": {
       "isApprovedForAll(address,address)": {
